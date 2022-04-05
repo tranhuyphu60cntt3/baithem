@@ -1,1 +1,1 @@
-aaaa
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz
