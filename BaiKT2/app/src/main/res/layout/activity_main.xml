@@ -17,8 +17,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RadioGroup
+        android:layout_width="102dp"
+        android:layout_height="244dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt" />
     <RadioButton
-        android:id="@+id/rdb13"
+        android:id="@+id/rdb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -35,24 +42,28 @@
         android:layout_marginTop="22dp"
         android:text="15%"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdb13" />
+        app:layout_constraintTop_toBottomOf="@+id/rdb" />
 
     <RadioButton
         android:id="@+id/rdb18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="21dp"
         android:text="18%"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="272dp" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdb15" />
+    />
     <Button
         android:id="@+id/btntip"
         android:layout_width="221dp"
         android:layout_height="49dp"
-        android:layout_marginStart="158dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="269dp"
         android:text="CALCULATE YOUR TIP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt" />
+
+     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
