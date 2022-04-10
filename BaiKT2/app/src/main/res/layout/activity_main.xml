@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <NumberPicker
-        android:id="@+id/edt"
+    <EditText
+        android:id="@+id/edtMoney"
         android:layout_width="305dp"
         android:layout_height="44dp"
         android:layout_marginStart="20dp"
@@ -19,30 +19,28 @@
 
     <RadioGroup
         android:id="@+id/radG"
+        android:layout_width="146dp"
+        android:layout_height="146dp"
         android:layout_centerInParent="true"
-        android:layout_width="94dp"
-        android:layout_height="184dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="130dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt">
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/rad13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="13%"
             android:onClick="checkbtn"
-            />
+            android:text="13%" />
 
         <RadioButton
             android:id="@+id/rad15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%"
-            tools:layout_editor_absoluteX="26dp"
             android:onClick="checkbtn"
-            />
+            android:text="15%"
+            tools:layout_editor_absoluteX="26dp" />
 
         <RadioButton
             android:id="@+id/rad18"
@@ -56,28 +54,29 @@
 
     <Button
         android:id="@+id/btntip"
-        android:layout_width="221dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="250dp"
-        android:enabled="false"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="74dp"
         android:text="CALCULATE YOUR TIP"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt" />
+        app:layout_constraintTop_toBottomOf="@+id/radG" />
 
     <TextView
         android:id="@+id/ViewTip"
         android:layout_width="219dp"
         android:layout_height="33dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="49dp"
         android:layout_marginEnd="96dp"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btntip" />
-
-    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
