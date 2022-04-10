@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
+    <NumberPicker
         android:id="@+id/edt"
         android:layout_width="305dp"
         android:layout_height="44dp"
@@ -18,52 +18,66 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:layout_width="102dp"
-        android:layout_height="244dp"
+        android:id="@+id/radG"
+        android:layout_centerInParent="true"
+        android:layout_width="94dp"
+        android:layout_height="184dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt" />
-    <RadioButton
-        android:id="@+id/rdb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="49dp"
-        android:text="13%"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt" />
+        app:layout_constraintTop_toBottomOf="@+id/edt">
 
-    <RadioButton
-        android:id="@+id/rdb15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="22dp"
-        android:text="15%"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdb" />
+        <RadioButton
+            android:id="@+id/rad13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13%"
+            android:onClick="checkbtn"
+            />
 
-    <RadioButton
-        android:id="@+id/rdb18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="21dp"
-        android:text="18%"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdb15" />
-    />
+        <RadioButton
+            android:id="@+id/rad15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            tools:layout_editor_absoluteX="26dp"
+            android:onClick="checkbtn"
+            />
+
+        <RadioButton
+            android:id="@+id/rad18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkbtn"
+            android:text="18%"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="69dp" />
+    </RadioGroup>
+
     <Button
         android:id="@+id/btntip"
         android:layout_width="221dp"
         android:layout_height="49dp"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="269dp"
+        android:layout_marginTop="250dp"
+        android:enabled="false"
         android:text="CALCULATE YOUR TIP"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt" />
 
-     />
+    <TextView
+        android:id="@+id/ViewTip"
+        android:layout_width="219dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="96dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btntip" />
+
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
