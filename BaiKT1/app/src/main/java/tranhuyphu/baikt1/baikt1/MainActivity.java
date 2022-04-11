@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             String pass = "Cntt60ntu!";
             String t = tk.getText().toString();
             String m = mk.getText().toString();
-            if ((t.equals(user)) && (m.equals(pass))){
+            if ((t.equals(user) == true) && (m.equals(pass))){
                 Toast.makeText(MainActivity.this, "User and Password is correct", Toast.LENGTH_LONG).show();
             }
             else {

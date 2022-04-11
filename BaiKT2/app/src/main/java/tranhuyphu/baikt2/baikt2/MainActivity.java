@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
-    RadioButton radioButton;
+    RadioButton radioButton,r1,r2,r3;
     TextView textView;
     Button button;
     EditText editText;
@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        r1 = findViewById(R.id.rad13);
+        r2 = findViewById(R.id.rad15);
+        r3 = findViewById(R.id.rad18);
         radioGroup = findViewById(R.id.radG);
         textView = findViewById(R.id.ViewTip);
         editText = findViewById(R.id.edtMoney);
@@ -34,14 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
                 String s = (String) radioButton.getText();
-                if (s.equals("13%")){
-                    money = money * 13 /100;
-                }else if (s.equals("15%")){
-                    money = money * 15 /100;
-                }else{
-                    money = money * 18 /100;
-                }
-                textView.setText("Your tip will be: $"+ money);
+                String s1 = (String) r1.getText();
+                String s2 = (String) r2.getText();
+                String s3 = (String) r3.getText();
+                if (s.equals(s1)) money = money * 13 /100;
+                if (s.equals(s2)) money = money * 15 /100;
+                if (s.equals(s3)) money = money * 18 /100;
+                textView.setText("Your tip will be: $ "+ money);
             }
         });
     }
